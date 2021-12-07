@@ -1,0 +1,589 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+      var i = 0;
+      var txt = 'Students Learning Instrumental, Vocal and many more activites and Some certificates earned by the students of our class';
+      var speed = 40;
+      
+      function typeWriter() {
+        if (i < txt.length) {
+          document.getElementById("Description").innerHTML += txt.charAt(i);
+          i++;
+          setTimeout(typeWriter, speed);
+        }
+      }
+      window.onload = typeWriter
+      window.onscroll = function() {scrollFunction()};
+
+      function scrollFunction() {
+        var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        var scrolled = (winScroll / height) * 100;
+        document.getElementById("myBar").style.width = scrolled + "%";
+      }
+      </script>
+      <style>
+        .bd-placeholder-img {
+          font-size: 1.125rem;
+          text-anchor: middle;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          user-select: none;
+        }
+  
+        @media (min-width: 768px) {
+          .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+          }
+        }
+      </style>
+    <style>
+      
+      html {
+        font-size: 10px;
+      }
+      img:hover {
+        animation: shake 0.5s;
+        animation-iteration-count: 5s;
+      }
+
+      @keyframes shake {
+        0% { transform: translate(.1rem, .1rem) rotate(0deg); }
+        10% { transform: translate(-.1rem, -.2rem) rotate(-1deg); }
+        20% { transform: translate(-.3rem, 0rem) rotate(1deg); }
+        30% { transform: translate(.3rem, .2rem) rotate(0deg); }
+        40% { transform: translate(.1rem, -.1rem) rotate(1deg); }
+        50% { transform: translate(-.1rem, .2rem) rotate(-1deg); }
+        60% { transform: translate(-.3rem, .1rem) rotate(0deg); }
+        70% { transform: translate(.3rem, .1rem) rotate(-1deg); }
+        80% { transform: translate(-.1rem, -.1rem) rotate(1deg); }
+        90% { transform: translate(.1rem, .2rem) rotate(0deg); }
+        100% { transform: translate(.1rem, -.2rem) rotate(-1deg); }
+      }
+      .float-left-submit-button {
+        background-color: rgb(231, 231, 231);
+        border-radius: .4rem;
+        border: none;
+        text-align: center;
+        padding: 1.0rem;
+        transition: all 0.5s;
+        cursor: pointer;
+        width: 6.8rem; height: 4rem; font-size: 1.4rem;
+      }
+
+      .float-left-submit-button span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+      }
+
+      .float-left-submit-button span:after {
+        content: '\00bb';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -2.0rem;
+        transition: 0.5s;
+      }
+
+      .float-left-submit-button:hover span {
+        padding-right: 2.5rem;
+      }
+
+      .float-left-submit-button:hover span:after {
+        opacity: 1;
+        right: 0;
+      }
+
+      .fw-light {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        margin: 2.0rem auto;
+        width: 29.5rem;
+        height: 8.5rem;
+        background: #85dcb8;
+        border-radius: 5.0rem;
+        font-family: 'Bahnschrift SemiBold SemiConden', sans-serif;
+        font-size: 3.5rem;
+        font-weight: bolder;
+        letter-spacing: .1rem;
+        transition: 1s box-shadow;
+        color: black;
+        font-size: 2rem;
+      }
+      
+      .fw-light:before, .fw-light::after {
+        display: block;
+        content: '';
+        position: absolute;
+        width:30.0rem;
+        height: 8.8rem;
+        background: #FDA8CF;
+        border-radius: 7.5rem;
+        z-index: -1;
+        animation: 1s clockwise infinite;
+        box-shadow: 0 .5rem 3.5rem 0rem rgba(0,0,0,.1);
+      }
+      
+      .fw-light:after {
+        background: #F3CE5E;
+        animation: 2s counterclockwise infinite;
+      }
+      
+      @keyframes clockwise {
+        0% {
+          top: -.5rem;
+          left: 0;
+        }
+        12% {
+          top: -.2rem;
+          left: .2rem;
+        }
+        25% {
+          top: 0;
+          left: .5rem;    
+        }
+        37% {
+          top: .2rem;
+          left: .2rem;
+        }
+        50% {
+          top: .5rem;
+          left: 0;    
+        }
+        62% {
+          top: .2rem;
+          left: -.2rem;
+        }
+        75% {
+          top: 0;
+          left: -.5rem;
+        }
+        87% {
+          top: -.2rem;
+          left: -.2rem;
+        }
+        100% {
+          top: -.5rem;
+          left: 0;    
+        }
+      }
+      
+      @keyframes counterclockwise {
+        0% {
+          top: -.5rem;
+          right: 0;
+        }
+        12% {
+          top: -.2rem;
+          right: .2rem;
+        }
+        25% {
+          top: 0;
+          right: .5rem;    
+        }
+        37% {
+          top: .2rem;
+          right: .2rem;
+        }
+        50% {
+          top: .5rem;
+          right: 0;    
+        }
+        62% {
+          top: .2rem;
+          right: -.2rem;
+        }
+        75% {
+          top: 0;
+          right: -.5rem;
+        }
+        87% {
+          top: -.2rem;
+          right: -.2rem;
+        }
+        100% {
+          top: -.5rem;
+          right: 0;    
+        }
+      }
+      .progress-container {
+        width: 100%;
+        height: .5rem;
+        background:#ccc;
+      }
+      .progress-bar {
+        height: .5rem;
+        background: #00ffa2;
+        width: 0;
+      }
+      .overlay {
+        position: absolute; 
+        top: 81%;
+        background: rgb(0, 0, 0);
+        background: rgba(0, 0, 0, 0.5); /* Black see-through */
+        color: wheat; 
+        width: 97.5%;
+        height: 17%;
+        font-family: 'Mv Boli';
+        align-self: center;
+        opacity: 1;
+        color: white;
+        font-size: 2.5rem;
+        padding: 2.0rem;
+        text-align-last: right;
+      }
+      .col:hover .overlay{
+        opacity: 1;
+      }
+      .et {
+        position: absolute;
+        right: 7.5rem;
+        color: grey;
+        font-size: 1.5rem;
+      }
+      .obs {
+        width:100%;
+        height:23rem;
+      }
+    </style>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Talents</title>
+    <link rel = "icon" href = "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/MA_Route_9B.svg/1200px-MA_Route_9B.svg.png" type = "image/x-icon">
+  </head>
+  <body style="background-color: #85dcb8;">
+    
+    <header>
+      <div class="collapse bg-dark" id="navbarHeader">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-8 col-md-7 py-4">
+              <h4 class="text-white">About</h4>
+              <p class="text-muted">This is a informative site about the creativity of students of 9B. It contains various things student of 9B have done with their creativity this site being a example as it is created By Paramveer a student of 9B.</p>
+            </div>
+            <div class="col-sm-4 offset-md-1 py-4">
+              <!-- <h4 class="text-white">Contact</h4>
+              <ul class="list-unstyled">
+                <li><a href="#" class="text-white">Follow on Twitter</a></li>
+                <li><a href="#" class="text-white">Like on Facebook</a></li>
+                <li><a href="#" class="text-white">Email me</a></li>
+              </ul> -->
+              <img class="obs" src="https://media-exp3.licdn.com/dms/image/C510BAQGrNa8H4YMlKg/company-logo_200_200/0/1587005474427?e=2159024400&v=beta&t=ELMoW14-cw7tgc-fl3H9oTEokAeOpBLlK-ZB665Rctg" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav class="navbar navbar-dark bg-dark shadow-sm" style="position: fixed; width: 100%; z-index: 1;  background-color: #f1f1f1; height: 9.5%;">
+        <div class="container-fluid">
+          <a class="navbar-brand d-flex align-items-center" href="/">
+            <img class="logo" class="l" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/MA_Route_9B.svg/1200px-MA_Route_9B.svg.png" alt="" width="55" height="50" fill="none" class="me-2">
+           <strong></strong>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+        <div class="progress-container" style="position: absolute; top: 6.65rem;">
+          <div class="progress-bar" id="myBar" style="background-color: cornflowerblue;"></div>
+      </nav>
+    </header>
+    
+    <main>
+    
+      <section class="py-5 text-center container">
+        <div class="row py-lg-5">
+          <div class="col-lg-6 col-md-8 mx-auto">
+            <h1 class="fw-light" style="color: black; font-family: 'Bahnschrift SemiBold SemiConden'; font-size: 2rem;"><span>Talent and Certificates of 9B</span></h1>
+            <p class="lead text-muted" style="color: black; font-family: 'MV Boli'; font-weight: bolder; font-size: 1.8rem;" id="Description"><b></b></p>
+            <p>
+              <a href="/art work" class="btn btn-secondary my-2" style="font-size: 1.65rem;">Art Work</a>
+              <a href="/classes" class="btn btn-secondary my-2" style="font-size: 1.65rem;">Classes took Place</a>
+            </p>
+          </div>
+        </div>
+      </section>
+    
+      <div class="album py-5 bg-light" style="background-color: #85dcb8;">
+        <div class="container">
+    
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            <div class="col">
+              <div class="card shadow-sm">
+                <img class="obs" src="/static/20.png" alt="" style="width:36rem;height:23rem;">
+                <div class="card-body">
+                  <p class="card-text" style="font-family: 'Mv boli'; font-size: 1.4rem;">- Instrumental Workex with Siddharth Sir</p>
+                  <div class="card-text">
+
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button id="myButton" class="float-left-submit-button" style="width: 6.8rem; height: 4rem; font-size: 1.4rem;" ><span>View</span></button>
+
+                      <script type="text/javascript">
+                        document.getElementById("myButton").onclick = function () {
+                          window.open("https://lh3.google.com/u/0/d/1yA7x3yHDjPGZj-E5zsmYiz8uOEDboPn2=w1920-h942-iv1");
+                        };
+                      </script>
+                    </div>
+                    <small class="text-muted"></small>
+                </div>
+              </div>
+             </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <img class="obs" src="/static/6.png" alt="" style="width:36rem;height:23rem;">
+                <div class="card-body">
+                  <p class="card-text" style="font-family: 'Mv boli'; font-size: 1.4rem;">- Music Workex with Lovkesh Sir</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button id="myButton_11" class="float-left-submit-button" style="width: 6.8rem; height: 4rem; font-size: 1.4rem;"><span>View</span></button>
+
+                      <script type="text/javascript">
+                        document.getElementById("myButton_11").onclick = function () {
+                          window.open("https://lh3.google.com/u/0/d/1oBGUIPT6OvW1Nv6Sg2gPrtozmklQh6tl=w1920-h942-iv2");
+                        };
+                      </script>
+                    </div>
+                    <small class="text-muted"></small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <img class="obs" src="/static/21.png" alt="" style="width:36rem;height:23rem;">
+                <div class="card-body">
+                  <p class="card-text" style="font-family: 'Mv boli'; font-size: 1.4rem;">- Instrumental Workex with Siddharth Sir</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button id="myButton_10" class="float-left-submit-button"  style="width: 6.8rem; height: 4rem; font-size: 1.4rem;"><span>View</span></button>
+
+                      <script type="text/javascript">
+                        document.getElementById("myButton_10").onclick = function () {
+                          window.open("https://lh3.google.com/u/0/d/1GdkGfxD3tbcU3hdy7LV09N6K0U1G0SW1=w1920-h932-iv1");
+                        };
+                      </script>
+                    </div>
+                    <small class="text-muted"></small>
+                  </div>
+                </div>
+              </div>
+            </div>
+    
+            <div class="col">
+              <div class="card shadow-sm">
+                <img class="obs" src="/static/37.jpeg" alt="" style="width:36rem;height:23rem;">
+                <div class="card-body">
+                  <p class="card-text" style="font-family: 'Mv boli'; font-size: 1.4rem;">-To Suditi Sharma</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button id="myButton_9" class="float-left-submit-button" style="width: 6.8rem; height: 4rem; font-size: 1.4rem;" ><span>View</span></button>
+
+                      <script type="text/javascript">
+                        document.getElementById("myButton_9").onclick = function () {
+                          window.open("https://lh3.google.com/u/0/d/1MA7vw6gdZRn6B1peDlrXwz4Ja-BbD7j-=w1920-h932-iv1");
+                        };
+                      </script>
+                    </div>
+                    <small class="text-muted"></small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <img class="obs" src="/static/36.jpeg" alt="" style="width:36rem;height:23rem;">
+                <div class="card-body">
+                  <p class="card-text" style="font-family: 'Mv boli'; font-size: 1.4rem;">-To Daksh</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button id="myButton_8" class="float-left-submit-button" style="width: 6.8rem; height: 4rem; font-size: 1.4rem;" ><span>View</span></button>
+
+                      <script type="text/javascript">
+                        document.getElementById("myButton_8").onclick = function () {
+                          window.open("https://lh3.google.com/u/0/d/1JPLGh5mNS6K7Dk_8-TDjKnRsY4znXnd4=w1920-h932-iv1");
+                        };
+                      </script>
+                    </div>
+                    <small class="text-muted"></small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <img class="obs" src="/static/25.jpeg" alt="" style="width:36rem;height:23rem;">
+                <div class="card-body">
+                  <p class="card-text" style="font-family: 'Mv boli'; font-size: 1.4rem;">-To Aadish Jain</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button id="myButton_7" class="float-left-submit-button"  style="width: 6.8rem; height: 4rem; font-size: 1.4rem;"><span>View</span></button>
+
+                      <script type="text/javascript">
+                        document.getElementById("myButton_7").onclick = function () {
+                          window.open("https://lh3.google.com/u/0/d/1AIwEQ6ahyA6OPAHWQcSpc-_aFpjGFI3b=w1920-h942-iv1");
+                        };
+                      </script>
+                    </div>
+                    <small class="text-muted"></small>
+                  </div>
+                </div>
+              </div>
+            </div>
+    
+            <div class="col">
+              <div class="card shadow-sm">
+                <img class="obs" src="/static/14.jpeg" alt=""  style="width:36rem;height:23rem;">
+                <div class="card-body">
+                  <p class="card-text" style="font-family: 'Mv boli'; font-size: 1.4rem;">- Art Workex With Sumitti Mam</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button id="myButton_6" class="float-left-submit-button" style="width: 6.8rem; height: 4rem; font-size: 1.4rem;"><span>View</span></button>
+
+                      <script type="text/javascript">
+                        document.getElementById("myButton_6").onclick = function () {
+                          window.open("https://lh3.google.com/u/0/d/1ir2s7vfjnLKZti0o4Hb3LZZsQO5lzfEX=w1920-h942-iv2");
+                        };
+                      </script>
+                    </div>
+                    <small class="text-muted"></small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <img class="obs" src="/static/12.png" alt=""  style="width:36rem;height:23rem;">
+                <div class="card-body">
+                  <p class="card-text" style="font-family: 'Mv boli'; font-size: 1.4rem;">- Music Workex with Lovkesh Sir</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button id="myButton_5" class="float-left-submit-button" style="width: 6.8rem; height: 4rem; font-size: 1.4rem;"><span>View</span></button>
+
+                      <script type="text/javascript">
+                        document.getElementById("myButton_5").onclick = function () {
+                          window.open("https://lh3.google.com/u/0/d/18LGb25UI51UuiwHxTf3rLbqLJ_4TR9l-=w1920-h942-iv2");
+                        };
+                      </script>
+                    </div>
+                    <small class="text-muted"></small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <img class="obs" src="/static/33.png" alt="" style="width:36rem;height:23rem;">
+                <div class="card-body">
+                  <p class="card-text" style="font-family: 'Mv boli'; font-size: 1.4rem;">- Art Workex With Sumitti Mam</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button id="myButton_4" class="float-left-submit-button" style="width: 6.8rem; height: 4rem; font-size: 1.4rem;" ><span>View</span></button>
+
+                      <script type="text/javascript">
+                        document.getElementById("myButton_4").onclick = function () {
+                          window.open("https://lh3.google.com/u/0/d/1sq2lGF2CjPQsDe0Rjoy0W8fL9mYgCK_B=w1920-h932-iv1");
+                        };
+                      </script>
+                    </div>
+                    <small class="text-muted"></small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <img class="obs" src="/static/24.jpeg" alt="" style="width:36rem;height:33.5rem;">
+                <div class="card-body">
+                  <p class="card-text" style="font-family: 'Mv boli'; font-size: 1.4rem;">- 9B Competed and Won<b> 2 </b>Of The Certificates</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button id="myButton_3" class="float-left-submit-button" style="width: 6.8rem; height: 4rem; font-size: 1.4rem;"><span>View</span></button>
+
+                      <script type="text/javascript">
+                        document.getElementById("myButton_3").onclick = function () {
+                          window.open("https://lh3.google.com/u/0/d/1YKeRhomEUXBAs2EFBqIpKqqZLVrTCGZV=w1920-h942-iv1");
+                        };
+                      </script>
+                    </div>
+                    <small class="text-muted"></small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <img class="obs" src="/static/28.jpeg" alt="" style="width:36rem;height:33.5rem;">
+                <div class="card-body">
+                  <p class="card-text" style="font-family: 'Mv boli'; font-size: 1.4rem;">- 9B Competed and Won<b> 3 </b>Of The Certificates</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button id="myButton_2" class="float-left-submit-button" style="width: 6.8rem; height: 4rem; font-size: 1.4rem;"><span>View</span></button>
+
+                      <script type="text/javascript">
+                        document.getElementById("myButton_2").onclick = function () {
+                          window.open("https://lh3.google.com/u/0/d/1WKof6_o0w0bORMKw52ujNjCAif8nxdxd=w1920-h942-iv1");
+                        };
+                      </script>
+                    </div>
+                    <small class="text-muted"></small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <img class="obs" src="/static/23.jpeg" alt="" style="width:36rem;height:33.5rem;">
+                <div class="card-body">
+                  <p class="card-text" style="font-family: 'Mv boli'; font-size: 1.4rem;">- 9B Competed and Won<b> 4 </b>Of The Certificates</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button id="myButton_1" class="float-left-submit-button" style="width: 6.8rem; height: 4rem; font-size: 1.4rem;"><span>View</span></button>
+
+                      <script type="text/javascript">
+                        document.getElementById("myButton_1").onclick = function () {
+                          window.open("https://lh3.google.com/u/0/d/1ACdr4zmvFJm27rfGkCXvSUOV_ON3UyVf=w1920-h942-iv1");
+                        };
+                      </script>
+                    </div>
+                    <small class="text-muted"></small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    </main>
+    
+    <footer class="text-muted py-5">
+      <div class="container">
+        <p class="float-end mb-1">
+          <p class="et">- Created By Paramveer</p>
+        </p>
+        <a href="/">
+          <button class="float-left-submit-button" style="width: 14.6rem; font-size: 1.6rem; height: 4.6rem;" ><span>Back To Home</span></button>
+          </a>
+          <a href="#">
+            <button class="float-left-submit-button"  style="width: 13.3rem; font-size: 1.6rem; height: 4.6rem;"><span>Back To Top</span></button>
+          </a>
+        </div>`
+    </footer>
+    
+    
+        <script src="/docs/5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    
+          
+      </body>
+</html>

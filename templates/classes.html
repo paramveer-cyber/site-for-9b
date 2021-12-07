@@ -1,0 +1,558 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+      var i = 0;
+      var txt = 'Students Interacting with Teachers on Online classes during the tough time of Covid-19';
+      var speed = 40;
+      
+      function typeWriter() {
+        if (i < txt.length) {
+          document.getElementById("Description").innerHTML += txt.charAt(i);
+          i++;
+          setTimeout(typeWriter, speed);
+        }
+      }
+      window.onload = typeWriter
+      window.onscroll = function() {scrollFunction()};
+
+      function scrollFunction() {
+        var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        var scrolled = (winScroll / height) * 100;
+        document.getElementById("myBar").style.width = scrolled + "%";
+      }
+      </script>
+      <style>
+        .bd-placeholder-img {
+          font-size: 1.125rem;
+          text-anchor: middle;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          user-select: none;
+        }
+  
+        @media (min-width: 768px) {
+          .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+          }
+        }
+      </style>
+    <style>
+      
+      html {
+        font-size: 10px;
+      }
+      img:hover {
+        animation: shake 0.5s;
+        animation-iteration-count: 5s;
+      }
+
+      @keyframes shake {
+        0% { transform: translate(.1rem, .1rem) rotate(0deg); }
+        10% { transform: translate(-.1rem, -.2rem) rotate(-1deg); }
+        20% { transform: translate(-.3rem, 0rem) rotate(1deg); }
+        30% { transform: translate(.3rem, .2rem) rotate(0deg); }
+        40% { transform: translate(.1rem, -.1rem) rotate(1deg); }
+        50% { transform: translate(-.1rem, .2rem) rotate(-1deg); }
+        60% { transform: translate(-.3rem, .1rem) rotate(0deg); }
+        70% { transform: translate(.3rem, .1rem) rotate(-1deg); }
+        80% { transform: translate(-.1rem, -.1rem) rotate(1deg); }
+        90% { transform: translate(.1rem, .2rem) rotate(0deg); }
+        100% { transform: translate(.1rem, -.2rem) rotate(-1deg); }
+      }
+      .float-left-submit-button {
+        background-color: rgb(231, 231, 231);
+        border-radius: .4rem;
+        border: none;
+        text-align: center;
+        padding: 1.0rem;
+        transition: all 0.5s;
+        cursor: pointer;
+        width: 6.8rem; height: 4rem; font-size: 1.4rem;
+      }
+
+      .float-left-submit-button span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+      }
+
+      .float-left-submit-button span:after {
+        content: '\00bb';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -2.0rem;
+        transition: 0.5s;
+      }
+
+      .float-left-submit-button:hover span {
+        padding-right: 2.5rem;
+      }
+
+      .float-left-submit-button:hover span:after {
+        opacity: 1;
+        right: 0;
+      }
+
+      .fw-light {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        margin: 2.0rem auto;
+        width: 29.5rem;
+        height: 8.5rem;
+        background: #85dcb8;
+        border-radius: 5.0rem;
+        font-family: 'Bahnschrift SemiBold SemiConden', sans-serif;
+        font-size: 3.5rem;
+        font-weight: bolder;
+        letter-spacing: .1rem;
+        transition: 1s box-shadow;
+        color: black;
+        font-size: 2rem;
+      }
+      
+      .fw-light:before, .fw-light::after {
+        display: block;
+        content: '';
+        position: absolute;
+        width:30.0rem;
+        height: 8.8rem;
+        background: #FDA8CF;
+        border-radius: 7.5rem;
+        z-index: -1;
+        animation: 1s clockwise infinite;
+        box-shadow: 0 .5rem 3.5rem 0rem rgba(0,0,0,.1);
+      }
+      
+      .fw-light:after {
+        background: #F3CE5E;
+        animation: 2s counterclockwise infinite;
+      }
+      
+      @keyframes clockwise {
+        0% {
+          top: -.5rem;
+          left: 0;
+        }
+        12% {
+          top: -.2rem;
+          left: .2rem;
+        }
+        25% {
+          top: 0;
+          left: .5rem;    
+        }
+        37% {
+          top: .2rem;
+          left: .2rem;
+        }
+        50% {
+          top: .5rem;
+          left: 0;    
+        }
+        62% {
+          top: .2rem;
+          left: -.2rem;
+        }
+        75% {
+          top: 0;
+          left: -.5rem;
+        }
+        87% {
+          top: -.2rem;
+          left: -.2rem;
+        }
+        100% {
+          top: -.5rem;
+          left: 0;    
+        }
+      }
+      
+      @keyframes counterclockwise {
+        0% {
+          top: -.5rem;
+          right: 0;
+        }
+        12% {
+          top: -.2rem;
+          right: .2rem;
+        }
+        25% {
+          top: 0;
+          right: .5rem;    
+        }
+        37% {
+          top: .2rem;
+          right: .2rem;
+        }
+        50% {
+          top: .5rem;
+          right: 0;    
+        }
+        62% {
+          top: .2rem;
+          right: -.2rem;
+        }
+        75% {
+          top: 0;
+          right: -.5rem;
+        }
+        87% {
+          top: -.2rem;
+          right: -.2rem;
+        }
+        100% {
+          top: -.5rem;
+          right: 0;    
+        }
+      }
+      .progress-container {
+        width: 100%;
+        height: .5rem;
+        background:#ccc;
+      }
+      .progress-bar {
+        height: .5rem;
+        background: #00ffa2;
+        width: 0;
+      }
+      .overlay {
+        position: absolute; 
+        top: 81%;
+        background: rgb(0, 0, 0);
+        background: rgba(0, 0, 0, 0.5); /* Black see-through */
+        color: wheat; 
+        width: 97.5%;
+        height: 17%;
+        font-family: 'Mv Boli';
+        align-self: center;
+        opacity: 1;
+        color: white;
+        font-size: 2.5rem;
+        padding: 2.0rem;
+        text-align-last: right;
+      }
+      .col:hover .overlay{
+        opacity: 1;
+      }
+      .et {
+        position: absolute;
+        right: 7.5rem;
+        color: grey;
+        font-size: 1.5rem;
+      }
+      .obs {
+        width:100%;
+        height:23rem;
+      }
+      .card-text {
+        font-family: 'Mv boli';
+         font-size: 1.4rem;
+      }
+    </style>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Online Classes</title>
+    <link rel = "icon" href = "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/MA_Route_9B.svg/1200px-MA_Route_9B.svg.png" type = "image/x-icon">
+  </head>
+  <body style="background-color: #85dcb8;">
+    <header>
+      <div class="collapse bg-dark" id="navbarHeader">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-8 col-md-7 py-4">
+              <h4 class="text-white">About</h4>
+              <p class="text-muted">This is a informative site about the creativity of students of 9B. It contains various things student of 9B have done with their creativity this site being a example as it is created By Paramveer a student of 9B.</p>
+            </div>
+            <div class="col-sm-4 offset-md-1 py-4">
+              <!-- <h4 class="text-white">Contact</h4>
+              <ul class="list-unstyled">
+                <li><a href="#" class="text-white">Follow on Twitter</a></li>
+                <li><a href="#" class="text-white">Like on Facebook</a></li>
+                <li><a href="#" class="text-white">Email me</a></li>
+              </ul> -->
+              <img src="https://media-exp3.licdn.com/dms/image/C510BAQGrNa8H4YMlKg/company-logo_200_200/0/1587005474427?e=2159024400&v=beta&t=ELMoW14-cw7tgc-fl3H9oTEokAeOpBLlK-ZB665Rctg" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav class="navbar navbar-dark bg-dark shadow-sm" style="position: fixed; width: 100%; z-index: 1;  background-color: #f1f1f1; height: 9.5%;">
+        <div class="container-fluid">
+          <a class="navbar-brand d-flex align-items-center" href="/">
+            <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/MA_Route_9B.svg/1200px-MA_Route_9B.svg.png" alt="" width="55" height="50" fill="none" class="me-2">
+           <strong></strong>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+        <div class="progress-container" style="position: absolute; top: 6.5rem;">
+          <div class="progress-bar" id="myBar" style="background-color: cornflowerblue;"></div>
+      </nav>
+    </header>
+    
+    <main>
+    
+      <section class="py-5 text-center container">
+        <div class="row py-lg-5">
+          <div class="col-lg-6 col-md-8 mx-auto">
+            <h1 class="fw-light" style="color: black; font-family: 'Bahnschrift SemiBold SemiConden';"><span>Interactive Students of 9B<span></h1>
+            <p class="lead text-muted" style="color: black; font-family: 'MV Boli'; font-weight: bolder; font-size: 1.8rem;" id="Description"><b></b></p>
+            <p>
+              <a href="/art work" class="btn btn-secondary my-2" style="font-size: 1.65rem;">Art work</a>
+              <a href="/talent" class="btn btn-secondary my-2" style="font-size: 1.65rem;">Talents and Certificates</a>
+            </p>
+          </div>
+        </div>
+      </section>
+    
+      <div class="album py-5 bg-light" style="background-color: #85dcb8;">
+        <div class="container">
+    
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            <div class="col">
+              <div class="card shadow-sm">
+                <img class="obs" src="/static/3.png" alt=""  >
+                <div class="card-body">
+                  <p class="card-text" style="font-family: 'Mv boli';">English Class with Stuti Mam</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button id="myButton" class="float-left-submit-button" ><span>View</span></button>
+
+                      <script type="text/javascript">
+                        document.getElementById("myButton").onclick = function () {
+                          window.open("https://lh3.google.com/u/0/d/1biN3aoLqmNmw_JoP9HKl2MAov7NwkwqM=w1920-h942-iv2");
+                        };
+                      </script>
+                    </div>
+                    <small class="text-muted"></small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <img class="obs" src="/static/29.png" alt=""  >
+                <div class="card-body">
+                  <p class="card-text" style="font-family: 'Mv boli';">Hindi Class with Suhani Mam</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" id="myButton_2" class="float-left-submit-button"><span>View</span></button>
+                      <script type="text/javascript">
+                        document.getElementById("myButton_2").onclick = function () {
+                          window.open("https://lh3.google.com/u/0/d/1z2eo5MHNU4ZYi4eo-8OFvcySVqxjuiv1=w1920-h932-iv1");
+                        };
+                      </script>
+                    </div>
+                    <small class="text-muted"></small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <img class="obs" src="/static/31.png" alt=""  >
+                <div class="card-body">
+                  <p class="card-text" style="font-family: 'Mv boli';">Maths Class with Yotsna Mam</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" id="myButton_3" class="float-left-submit-button"><span>View</span></button>
+                      <script type="text/javascript">
+                        document.getElementById("myButton_3").onclick = function () {
+                          window.open("https://lh3.google.com/u/0/d/1KO_-TZU7jadVwMuTlPC7geOYtGQak08d=w1920-h932-iv1");
+                        };
+                      </script>
+                    </div>
+                    <small class="text-muted"></small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <img class="obs" src="/static/8.png" alt=""  >
+                <div class="card-body">
+                  <p class="card-text" style="font-family: 'Mv boli';">Physics Class with Sonia Mam</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button id="myButton_4" class="float-left-submit-button" ><span>View</span></button>
+                      <script type="text/javascript">
+                        document.getElementById("myButton_4").onclick = function () {
+                          window.open("https://lh3.google.com/u/0/d/1d8TNs_vSOokD4-voFFvwaXzdAmVgUooj=w1920-h942-iv2");
+                        };
+                      </script>
+                    </div>
+                    <small class="text-muted"></small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <img class="obs" src="/static/34.png" alt="">
+                <div class="card-body">
+                  <p class="card-text" style="font-family: 'Mv boli';">Biology Class with Sonia Mam</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button id="myButton_5" class="float-left-submit-button" ><span>View</span></button>
+                      <script type="text/javascript">
+                        document.getElementById("myButton_5").onclick = function () {
+                          window.open("https://lh3.google.com/u/0/d/1oAsB7o6cq2WgXCyTEdelkvk2AnLaR7aO=w1920-h932-iv1");
+                        };
+                      </script>
+                    </div>
+                    <small class="text-muted"></small>
+                  </div>
+                </div>
+              </div>
+            </div>
+    
+            <div class="col">
+              <div class="card shadow-sm">
+                <img class="obs" src="/static/30.png" alt=""  >
+                <div class="card-body">
+                  <p class="card-text" style="font-family: 'Mv boli';">Chemistry Class with Shefali Mam</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" id="myButton_6" class="float-left-submit-button"><span>View</span></button>
+                      <script type="text/javascript">
+                        document.getElementById("myButton_6").onclick = function () {
+                          window.open("https://lh3.google.com/u/0/d/1ZLcr24u8Z24bd3RsPG6n6McY7Hv5mRZA=w1920-h932-iv1");
+                        };
+                      </script>
+                    </div>
+                    <small class="text-muted"></small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <img class="obs" src="/static/38.png" alt=""  >
+                <div class="card-body">
+                  <p class="card-text" style="font-family: 'Mv boli';">History/Civics Class with Amit Sir</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" id="myButton_7" class="float-left-submit-button"><span>View</span></button>
+                      <script type="text/javascript">
+                        document.getElementById("myButton_7").onclick = function () {
+                          window.open("https://lh3.google.com/u/0/d/1mNxUwLGtxHMj_-KBjrW2IyBAdxEDOUmb=w1920-h932-iv1");
+                        };
+                      </script>
+                    </div>
+                    <small class="text-muted"></small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <img class="obs" src="/static/7.png" alt=""  >
+                <div class="card-body">
+                  <p class="card-text" style="font-family: 'Mv boli';">Geography/Economics Class with Pooja Mam</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button id="myButton_8" class="float-left-submit-button" ><span>View</span></button>
+
+                      <script type="text/javascript">
+                        document.getElementById("myButton_8").onclick = function () {
+                          window.open("https://lh3.google.com/u/0/d/1g0M9YjNkbfKkOvVXAtXqxA-Bgfi8e2r-=w1920-h942-iv2");
+                        };
+                      </script>
+                    </div>
+                    <small class="text-muted"></small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <img class="obs" src="/static/35.png" alt=""  >
+                <div class="card-body">
+                  <p class="card-text" style="font-family: 'Mv boli';">IT Class with Sakshi Mam</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" id="myButton_9" class="float-left-submit-button"><span>View</span></button>
+                      <script type="text/javascript">
+                        document.getElementById("myButton_9").onclick = function () {
+                          window.open("https://lh3.google.com/u/0/d/1Etq5d79cXOQqWyK8RxCQ5w8sbZq-y4cA=w1920-h932-iv1");
+                        };
+                      </script>
+                    </div>
+                    <small class="text-muted"></small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    </main>
+    
+    <footer class="text-muted py-5">
+      <div class="container">
+        <p class="float-end mb-1">
+          <p class="et">- Created By Paramveer</p>
+        </p>
+        <a href="/">
+          <button class="float-left-submit-button" style="width: 14.6rem; font-size: 1.6rem; height: 4.6rem;" ><span>Back To Home</span></button>
+          </a>
+          <a href="#">
+            <button class="float-left-submit-button"  style="width: 13.3rem; font-size: 1.6rem; height: 4.6rem;"><span>Back To Top</span></button>
+          </a>
+        </div>
+    </footer>
+    
+    
+        <script src="/docs/5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    
+          
+      <!-- Code injected by live-server -->
+<script type="text/javascript">
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script></body>
+</html>
