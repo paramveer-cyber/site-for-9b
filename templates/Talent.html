@@ -1,7 +1,6 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script>
@@ -25,246 +24,13 @@
         var scrolled = (winScroll / height) * 100;
         document.getElementById("myBar").style.width = scrolled + "%";
       }
-      </script>
-      <style>
-        img {
-          transition: ease-in 800ms;
-        }
-        .bd-placeholder-img {
-          font-size: 1.125rem;
-          text-anchor: middle;
-          -webkit-user-select: none;
-          -moz-user-select: none;
-          user-select: none;
-        }
-  
-        @media (min-width: 768px) {
-          .bd-placeholder-img-lg {
-            font-size: 3.5rem;
-          }
-        }
-      </style>
-    <style>
-      
-      html {
-        font-size: 10px;
-      }
-      img:hover {
-        animation: shake 0.5s;
-        animation-iteration-count: 5s;
-      }
-
-      @keyframes shake {
-        0% { transform: translate(.1rem, .1rem) rotate(0deg); }
-        10% { transform: translate(-.1rem, -.2rem) rotate(-1deg); }
-        20% { transform: translate(-.3rem, 0rem) rotate(1deg); }
-        30% { transform: translate(.3rem, .2rem) rotate(0deg); }
-        40% { transform: translate(.1rem, -.1rem) rotate(1deg); }
-        50% { transform: translate(-.1rem, .2rem) rotate(-1deg); }
-        60% { transform: translate(-.3rem, .1rem) rotate(0deg); }
-        70% { transform: translate(.3rem, .1rem) rotate(-1deg); }
-        80% { transform: translate(-.1rem, -.1rem) rotate(1deg); }
-        90% { transform: translate(.1rem, .2rem) rotate(0deg); }
-        100% { transform: translate(.1rem, -.2rem) rotate(-1deg); }
-      }
-      .float-left-submit-button {
-        background-color: rgb(231, 231, 231);
-        border-radius: .4rem;
-        border: none;
-        text-align: center;
-        padding: 1.0rem;
-        transition: all 0.5s;
-        cursor: pointer;
-        width: 6.8rem; height: 4rem; font-size: 1.4rem;
-      }
-
-      .float-left-submit-button span {
-        cursor: pointer;
-        display: inline-block;
-        position: relative;
-        transition: 0.5s;
-      }
-
-      .float-left-submit-button span:after {
-        content: '\00bb';
-        position: absolute;
-        opacity: 0;
-        top: 0;
-        right: -2.0rem;
-        transition: 0.5s;
-      }
-
-      .float-left-submit-button:hover span {
-        padding-right: 2.5rem;
-      }
-
-      .float-left-submit-button:hover span:after {
-        opacity: 1;
-        right: 0;
-      }
-
-      .fw-light {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-        margin: 2.0rem auto;
-        width: 29.5rem;
-        height: 8.5rem;
-        background: #85dcb8;
-        border-radius: 5.0rem;
-        font-family: 'Bahnschrift SemiBold SemiConden', sans-serif;
-        font-size: 3.5rem;
-        font-weight: bolder;
-        letter-spacing: .1rem;
-        transition: 1s box-shadow;
-        color: black;
-        font-size: 2rem;
-      }
-      
-      .fw-light:before, .fw-light::after {
-        display: block;
-        content: '';
-        position: absolute;
-        width:30.0rem;
-        height: 8.8rem;
-        background: #FDA8CF;
-        border-radius: 7.5rem;
-        z-index: -1;
-        animation: 1s clockwise infinite;
-        box-shadow: 0 .5rem 3.5rem 0rem rgba(0,0,0,.1);
-      }
-      
-      .fw-light:after {
-        background: #F3CE5E;
-        animation: 2s counterclockwise infinite;
-      }
-      
-      @keyframes clockwise {
-        0% {
-          top: -.5rem;
-          left: 0;
-        }
-        12% {
-          top: -.2rem;
-          left: .2rem;
-        }
-        25% {
-          top: 0;
-          left: .5rem;    
-        }
-        37% {
-          top: .2rem;
-          left: .2rem;
-        }
-        50% {
-          top: .5rem;
-          left: 0;    
-        }
-        62% {
-          top: .2rem;
-          left: -.2rem;
-        }
-        75% {
-          top: 0;
-          left: -.5rem;
-        }
-        87% {
-          top: -.2rem;
-          left: -.2rem;
-        }
-        100% {
-          top: -.5rem;
-          left: 0;    
-        }
-      }
-      
-      @keyframes counterclockwise {
-        0% {
-          top: -.5rem;
-          right: 0;
-        }
-        12% {
-          top: -.2rem;
-          right: .2rem;
-        }
-        25% {
-          top: 0;
-          right: .5rem;    
-        }
-        37% {
-          top: .2rem;
-          right: .2rem;
-        }
-        50% {
-          top: .5rem;
-          right: 0;    
-        }
-        62% {
-          top: .2rem;
-          right: -.2rem;
-        }
-        75% {
-          top: 0;
-          right: -.5rem;
-        }
-        87% {
-          top: -.2rem;
-          right: -.2rem;
-        }
-        100% {
-          top: -.5rem;
-          right: 0;    
-        }
-      }
-      .progress-container {
-        width: 100%;
-        height: .5rem;
-        background:#ccc;
-      }
-      .progress-bar {
-        height: .5rem;
-        background: #00ffa2;
-        width: 0;
-      }
-      .overlay {
-        position: absolute; 
-        top: 81%;
-        background: rgb(0, 0, 0);
-        background: rgba(0, 0, 0, 0.5); /* Black see-through */
-        color: wheat; 
-        width: 97.5%;
-        height: 17%;
-        font-family: 'Mv Boli';
-        align-self: center;
-        opacity: 1;
-        color: white;
-        font-size: 2.5rem;
-        padding: 2.0rem;
-        text-align-last: right;
-      }
-      .col:hover .overlay{
-        opacity: 1;
-      }
-      .et {
-        position: absolute;
-        right: 7.5rem;
-        color: grey;
-        font-size: 1.5rem;
-      }
-      .obs {
-        width:100%;
-        height:23rem;
-      }
-    </style>
-    <!-- Bootstrap CSS -->
+    </script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
     <title>Talents</title>
+    <link rel="stylesheet" href="main.css">
     <link rel = "icon" href = "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/MA_Route_9B.svg/1200px-MA_Route_9B.svg.png" type = "image/x-icon">
   </head>
   <body style="background-color: #85dcb8;">
-    
     <header>
       <div class="collapse bg-dark" id="navbarHeader">
         <div class="container">
@@ -288,8 +54,6 @@
         <div class="container">
           <a href="/" class="navbar-brand d-flex align-items-center">
             <img loading="lazy" class="logo" class="obs" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/MA_Route_9B.svg/1200px-MA_Route_9B.svg.png" alt="" width="50" height="50" fill="none" class="me-2" style="position: absolute; top: 0.6rem; left: 5rem;">
-            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="me-2" viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
-            <strong>Album</strong> -->
           </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation" style="width: 4rem;height: 3rem;">
             <span class="navbar-toggler-icon"></span>
