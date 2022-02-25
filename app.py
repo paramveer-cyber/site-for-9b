@@ -17,9 +17,5 @@ def talent():
 def classes():
     return render_template('classes.html')
 
-@app.route('/testing')
-def test():
-    return render_template('testing.html')
-
 if __name__ == "__main__":
     app.run(debug=True, port=2048)
